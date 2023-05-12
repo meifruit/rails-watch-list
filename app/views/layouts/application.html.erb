@@ -11,6 +11,14 @@
   </head>
 
   <body>
+
+    <div class="banner">
+      <%= video_tag "banner.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "banner_video" %>
+     <div class="container">
+      <h1 class="home"> It's movie time!</h1>
+      <p>Grab some popcorn and get ready..</p>
+     </div>
+    </div>
     <%= yield %>
   </body>
 </html>

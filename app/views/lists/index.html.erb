@@ -1,0 +1,23 @@
+<%# navbar %>
+<div class="d-flex justify-content-between">
+ <div class="navbar-lewagon">
+    <div>
+      <a class="navbar-brand text-light" style="text-shadow: 1px 1px 0px grey" href="/">MovieLists</a>
+    </div>
+    <div>
+      <a class="navbar-brand btn btn-outline-light shadow-sm text-light" href="/lists/new">Add a new list</a>
+    </div>
+ </div>
+</div>
+
+
+<div class="container">
+
+ <h1>Movie lists</h1>
+ <% @lists.each do |list| %>
+ <ul>
+  <li> <%= link_to list.name, list_path(list) %></li>
+  <% end %>
+ </ul>
+</div>
+<%= link_to 'Create a movie list', new_list_path %>
