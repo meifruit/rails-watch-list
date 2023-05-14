@@ -1,16 +1,18 @@
-// .banner {
-//   background-size: cover;
-//   background-position: center;
-//   padding: 150px 0;
-// }
-.banner{
-  height: 350px;
-  display: flex;
+.banner {
+
+  background-image: url(pexels-moose.jpg);
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
-  padding-left: 0px;
-  }
+  padding: 150px 0;
+}
+// .banner{
+//   height: 350px;
+//   display: flex;
+//   background-size: cover;
+//   background-position: center;
+//   padding: 100px 0;
+//   padding-left: 0px;
+//   }
 
 .banner h1 {
   margin: 0;
@@ -27,12 +29,12 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner_video {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  object-fit: cover;
-  top: -60px;
-  z-index: -2;
-  margin-bottom: 60px;
- }
+// .banner_video {
+//   width: 100vw;
+//   height: 100vh;
+//   position: absolute;
+//   object-fit: cover;
+//   top: -60px;
+//   z-index: -2;
+//   margin-bottom: 60px;
+//  }

@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+  # before_action :set_list, only: [:show, :destroy]
   def index
     @lists = List.all
   end
@@ -20,14 +21,21 @@ class ListsController < ApplicationController
     end
   end
 
-  def update
-    @list.update(list_params)
-    redirect_to list_path(@list)
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to list_path(@list), status: :see_other
   end
-
-
+  # def update
+  #   @list.update(list_params)
+  #   redirect_to list_path(@list)
+  # ends
   private
   def list_params
     params.require(:list).permit(:name, :photo)
+  end
+
+  def set_list
+    @list = List.find(params[:id])
   end
 end

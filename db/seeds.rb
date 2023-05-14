@@ -14,23 +14,28 @@
 # Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.", poster_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg", rating: 7.9)
 # Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
+
 require 'open-uri'
-# Movie.destroy_all
-# # List.destroy_all
+require 'json'
+
+puts "Cleaning up database..."
+Movie.destroy_all
+puts "Database cleaned"
 
 # # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
 response = JSON.parse(URI.open(url).read)
 
-response['results'].each do |movie_hash|
+response['results'].each do |movie|
+  base_poster_url = "https://image.tmdb.org/t/p/original"
   # puts
   # p movie_hash
   # create an instance with the hash
-  p movie_hash['title']
+  p movie['title']
   Movie.create(
-    title: movie_hash['title'],
-    overview: movie_hash['overview'],
-    rating: movie_hash['vote_average'],
-    poster_url: "https://image.tmdb.org/t/p/original" + movie_hash['poster_path'],
+    title: movie['title'],
+    overview: movie['overview'],
+    rating: movie['vote_average'],
+    poster_url: "#{base_poster_url}#{movie['backdrop_path']}"
   )
 end
