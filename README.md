@@ -2,7 +2,10 @@
 
 Simple movie list organizer.
 
-<a href="https://watch-list-40nu.onrender.com/lists" /a><img src="https://github.com/ctyamashita/rails-watch-list/blob/master/app/assets/images/" />
+<a href="https://watch-list-40nu.onrender.com/lists">
+  <img src="https://github.com/ctyamashita/rails-watch-list/raw/master/app/assets/images/your-image-filename.jpg" alt="Image Description">
+</a>
+
 <br>
    
 
