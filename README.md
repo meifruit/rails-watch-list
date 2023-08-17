@@ -46,7 +46,7 @@ rails s
 ## Built With
 - [Rails 6](https://guides.rubyonrails.org/) - Backend / Front-end
 - [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
-- [Heroku](https://heroku.com/) - Deployment
+- [Render](https://render.com/) - Deployment
 - [PostgreSQL](https://www.postgresql.org/) - Database
 - [Bootstrap](https://getbootstrap.com/) — Styling
 
