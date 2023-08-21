@@ -2,11 +2,7 @@
 
 Simple movie list organizer.
 
-<a href="https://watch-list-40nu.onrender.com/lists">
-  <img src="https://github.com/ctyamashita/rails-watch-list/raw/master/app/assets/images/your-image-filename.jpg" alt="Image Description">
-</a>
 
-<br>
    
 
 ## Getting Started
@@ -45,7 +41,6 @@ rails s
 
 ## Built With
 - [Rails 6](https://guides.rubyonrails.org/) - Backend / Front-end
-- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
 - [Render](https://render.com/) - Deployment
 - [PostgreSQL](https://www.postgresql.org/) - Database
 - [Bootstrap](https://getbootstrap.com/) — Styling
