@@ -1,8 +1,9 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
   grid-gap: 30px;
+  margin-bottom: 40px;
 }
 .card-category {
   background-size: cover;
@@ -92,12 +93,22 @@
 @media (min-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card-category {
+    height: 200px;
+    width: 380px;
   }
 }
