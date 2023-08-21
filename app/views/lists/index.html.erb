@@ -2,24 +2,24 @@
   <div class="container">
     <h1> <strong>MEI STUDIOS</strong></h1>
     <p>-Grab some popcorn and get ready-</p>
-    <a class="btn btn-flat" href="#">Watch now</a>
+    <%# <a class="btn btn-flat" href="#">Watch now</a> %>
   </div>
 </div>
-<div class="container mt-3">
-  <div class="d-flex justify-content-between align-items-center">
+<div class="container my-3">
+  <div class="d-flex justify-content-between align-items-center my-3">
     <h1>Movie lists</h1>
     <%= link_to 'Create a movie list', new_list_path, class:"btn btn-info " %>
   </div>
-</div>
-<div class=container >
-  <div class="cards">
-    <% @lists.each do |list| %>
-      <div class="item card-category position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
-        <p><%= link_to list.name, list_path(list)%></p>
-        <div>
-          <%= link_to '', list_path(list) , data: { turbo_method: :delete, turbo_confirm: "Are you sure delete #{list.name}?" }, class: "fa-regular fa-trash-can position-absolute translate-middle bottom-0 end-0" %>
+  <div class=container >
+    <div class="cards">
+      <% @lists.each do |list| %>
+        <div class="item card-category position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
+          <p><%= link_to list.name, list_path(list)%></p>
+          <div>
+            <%= link_to '', list_path(list) , data: { turbo_method: :delete, turbo_confirm: "Are you sure delete #{list.name}?" }, class: "fa-regular fa-trash-can fa-xs position-absolute translate-middle bottom-0 end-0" %>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

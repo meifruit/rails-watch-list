@@ -10,40 +10,28 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
-    <%# navbar %>
-    <%# <div class="d-flex justify-content-between">
-    <div class="navbar-lewagon">
-        <div>
-          <a class="navbar-brand text-light" style="text-shadow: 1px 1px 0px grey" href="/">MovieLists</a>
-        </div>
-        <div>
-          <a class="navbar-brand btn btn-outline-light shadow-sm text-light" href="/lists/new">Add a new list</a>
-        </div>
-    </div>
-    </div> %>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <%# <a class="navbar-brand" href="#">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-</a> %>
-        <i class="fa-solid fa-film-simple"></i>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <%# <a class="nav-link active" aria-current="page" href="#">Movie list</a> %>
+              <%#= link_to 'Create a movie list', new_list_path, class: "nav-link"%>
+            </li>
             <li class="nav-item active">
               <%= link_to 'Movie list', lists_path, class: "nav-link" %>
             </li>
-            <li class="nav-item">
-              <%= link_to 'Create a movie list', new_list_path, class: "nav-link" %>
-            </li>
-            <!--li class="nav-item"-->
-            <!--/li-->
+            <%# <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> %>
           </ul>
         </div>
       </div>
-    </div>
-    <%= yield %>
-  </body>
+    </nav>
+  </div>
+  <%= yield %>
+</body>
 </html>

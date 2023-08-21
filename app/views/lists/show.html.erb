@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3">
   <h1><%= @list.name %></h1>
   <% if @list.bookmarks.exists?%>
     <div class="cards">
@@ -6,10 +6,14 @@
         <div class="card" style="width: 18rem;">
           <img src="<%= bookmark.movie.poster_url %>" class="card-img-top" alt="poster-image">
           <div class="card-body">
-            <h5 class="card-title"><%= bookmark.movie.title %></h5>
+            <h5 class="card-title">
+              <a href="https://www.google.com/search?q=<%= CGI.escape(bookmark.movie.title) %>" target="_blank" rel="noopener noreferrer">
+                <%= bookmark.movie.title %>
+              </a>
+            </h5>
             <p class="card-text"><%= bookmark.comment %></p>
             <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
-            <%= link_to '', bookmark_path(bookmark) , data: { turbo_method: :delete, turbo_confirm: "Are you sure delete #{bookmark.movie.title}?" }, class: "fa-regular fa-trash-can" %>
+            <%= link_to '', bookmark_path(bookmark) , data: { turbo_method: :delete, turbo_confirm: "Are you sure delete #{bookmark.movie.title}?" }, class: "fa-regular fa-trash-can fa-sm" %>
           </div>
         </div>
       <% end %>
